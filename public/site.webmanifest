@@ -1,0 +1,24 @@
+{
+  "name": "tyform - The smarter way to build forms",
+  "short_name": "tyform",
+  "icons": [
+    {
+      "src": "https://tyform.com/favicon.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "https://tyform.com/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "https://tyform.com/favicon.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+} 
