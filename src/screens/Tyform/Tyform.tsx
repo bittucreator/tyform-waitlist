@@ -22,18 +22,17 @@ export const Tyform = (): JSX.Element => {
     setAnimationStage(0);
     
     const stages = currentStep === 'success' ? [
-      { delay: 200, stage: 1 }, // Logo
-      { delay: 400, stage: 2 }, // Success Icon
-      { delay: 600, stage: 3 }, // Headline
-      { delay: 800, stage: 4 }, // Subtitle
-      { delay: 1000, stage: 5 }, // What happens next
-      { delay: 1200, stage: 6 }, // Referral Section
+      { delay: 150, stage: 1 }, // Logo
+      { delay: 300, stage: 2 }, // Success Icon
+      { delay: 450, stage: 3 }, // Headline
+      { delay: 600, stage: 4 }, // Subtitle
+      { delay: 750, stage: 5 }, // What happens next
+      { delay: 900, stage: 6 }, // Referral Section
     ] : [
-      { delay: 200, stage: 1 }, // Logo
-      { delay: 400, stage: 2 }, // Badge or Loading content
-      { delay: 600, stage: 3 }, // Headline
-      { delay: 800, stage: 4 }, // Description
-      { delay: 1000, stage: 5 }, // Form
+      { delay: 150, stage: 1 }, // Logo
+      { delay: 300, stage: 2 }, // Headline
+      { delay: 450, stage: 3 }, // Description
+      { delay: 600, stage: 4 }, // Form
     ];
 
     stages.forEach(({ delay, stage }) => {
@@ -88,8 +87,8 @@ export const Tyform = (): JSX.Element => {
         <div className="bg-white w-full max-w-[1440px] relative flex flex-col justify-center min-h-screen py-6 px-4 sm:py-10 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center">
             {/* Logo */}
-            <div className={`flex items-center justify-center gap-1 mb-8 transition-all duration-700 ease-out ${
-              animationStage >= 1 ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-4'
+            <div className={`flex items-center justify-center gap-1 mb-8 transition-all duration-1000 ease-out ${
+              animationStage >= 1 ? 'opacity-100 blur-0 translate-y-0 scale-100' : 'opacity-0 blur-lg translate-y-8 scale-95'
             }`}>
               <div className="relative w-[20px] h-[21px] sm:w-[24.1px] sm:h-[25.57px] bg-[url(/clip-path-group.png)] bg-contain bg-no-repeat bg-center">
               </div>
@@ -99,8 +98,8 @@ export const Tyform = (): JSX.Element => {
             </div>
 
             {/* Loading Animation */}
-            <div className={`flex flex-col items-center space-y-6 transition-all duration-700 ease-out delay-200 ${
-              animationStage >= 2 ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-4'
+            <div className={`flex flex-col items-center space-y-6 transition-all duration-1000 ease-out delay-200 ${
+              animationStage >= 2 ? 'opacity-100 blur-0 translate-y-0 scale-100' : 'opacity-0 blur-lg translate-y-8 scale-98'
             }`}>
               <div className="relative">
                 <div className="w-16 h-16 border-4 border-gray-200 rounded-full animate-spin border-t-black"></div>
@@ -240,8 +239,8 @@ export const Tyform = (): JSX.Element => {
       <div className="bg-white w-full max-w-[1440px] relative flex items-center justify-center min-h-screen py-8 px-4 sm:py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center w-full max-w-[800px] mx-auto">
           {/* Logo */}
-          <div className={`flex items-center justify-center gap-1 mb-8 sm:mb-10 lg:mb-12 transition-all duration-700 ease-out ${
-            animationStage >= 1 ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-4'
+          <div className={`flex items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 lg:mb-12 transition-all duration-700 ease-out ${
+            animationStage >= 1 ? 'opacity-100 blur-0 translate-y-0 scale-100' : 'opacity-0 blur-lg translate-y-8 scale-95'
           }`}>
             <div className="relative w-[20px] h-[21px] sm:w-[24.1px] sm:h-[25.57px] bg-[url(/clip-path-group.png)] bg-contain bg-no-repeat bg-center">
             </div>
@@ -250,23 +249,11 @@ export const Tyform = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Notification Badge */}
-          <Badge className={`flex items-center gap-2 sm:gap-2.5 px-3 py-1 sm:px-4 sm:py-1.5 mb-10 sm:mb-12 lg:mb-16 bg-[#f8f8f8] text-black rounded-[65px] border border-solid border-[#c7c7c7] shadow-none hover:bg-[#f8f8f8] max-w-fit transition-all duration-700 ease-out ${
-            animationStage >= 2 ? 'opacity-100 blur-0 translate-y-0 scale-100' : 'opacity-0 blur-sm translate-y-4 scale-95'
-          }`}>
-            <div className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] bg-[#00000045] rounded-[9px] sm:rounded-[11px] flex items-center justify-center">
-              <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-white rounded-[5px] sm:rounded-[6.11px]" />
-            </div>
-            <span className="[font-family:'Manrope',Helvetica] font-bold text-sm sm:text-base lg:text-lg">
-              Join waitlist now!
-            </span>
-          </Badge>
-
           {/* Main Content */}
           <div className="w-full text-center">
             {/* Headline */}
             <h1 className={`mb-8 sm:mb-10 lg:mb-12 px-2 transition-all duration-700 ease-out ${
-              animationStage >= 3 ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-4'
+              animationStage >= 2 ? 'opacity-100 blur-0 translate-y-0 scale-100' : 'opacity-0 blur-lg translate-y-8 scale-98'
             }`}>
               <span className="[font-family:'Manrope',Helvetica] font-bold text-black text-[32px] sm:text-[48px] lg:text-[64px] xl:text-[72px] tracking-[-1px] sm:tracking-[-1.5px] lg:tracking-[-2.05px] xl:tracking-[-2.3px] leading-[36px] sm:leading-[52px] lg:leading-[70.4px] xl:leading-[79.2px]">
                 The{" "}
@@ -274,9 +261,12 @@ export const Tyform = (): JSX.Element => {
               <span 
                 className="[font-family:'Instrument_Serif',Helvetica] italic text-[36px] sm:text-[56px] lg:text-[75px] xl:text-[84px] tracking-[-1.2px] sm:tracking-[-2px] lg:tracking-[-2.81px] xl:tracking-[-3.15px] leading-[40px] sm:leading-[60px] lg:leading-[82.5px] xl:leading-[92.4px] relative cursor-pointer group"
                 style={{
-                  background: 'linear-gradient(120deg, rgba(100, 100, 100, 0.3) 0%, rgba(100, 100, 100, 1) 25%, rgba(100, 100, 100, 1) 50%, rgba(100, 100, 100, 0.3) 75%, rgba(100, 100, 100, 1) 100%) 0% 0% / 400% 100% text',
+                  background: 'linear-gradient(90deg, #007CF0, #00DFD8, #7928CA, #FF0080, #FF4D4D, #FFAA00)',
+                  backgroundSize: '400% 100%',
+                  WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                  animation: '3s ease-in-out 0s infinite normal none running aurora-shimmer'
+                  backgroundClip: 'text',
+                  animation: '3s ease-in-out infinite aurora-shimmer'
                 }}
               >
                 smartest
@@ -290,7 +280,7 @@ export const Tyform = (): JSX.Element => {
 
             {/* Description */}
             <p className={`[font-family:'Manrope',Helvetica] font-normal text-[#4c4c4c] text-base sm:text-lg lg:text-xl xl:text-[22px] text-center max-w-[618px] mx-auto mb-8 sm:mb-10 lg:mb-12 leading-[24px] sm:leading-[28px] lg:leading-[33px] xl:leading-[36px] px-4 sm:px-0 transition-all duration-700 ease-out ${
-              animationStage >= 4 ? 'opacity-100 blur-0 translate-y-0' : 'opacity-0 blur-sm translate-y-4'
+              animationStage >= 3 ? 'opacity-100 blur-0 translate-y-0 scale-100' : 'opacity-0 blur-lg translate-y-8 scale-98'
             }`}>
               Say goodbye to boring forms. Meet tyform — the AI-powered,
               intuitive form builder that creates intelligent forms for you.
@@ -298,7 +288,7 @@ export const Tyform = (): JSX.Element => {
 
             {/* Form */}
             <div className={`flex flex-col items-center justify-center gap-3 sm:gap-4 max-w-[500px] mx-auto px-4 sm:px-0 transition-all duration-700 ease-out ${
-              animationStage >= 5 ? 'opacity-100 blur-0 translate-y-0 scale-100' : 'opacity-0 blur-sm translate-y-4 scale-95'
+              animationStage >= 4 ? 'opacity-100 blur-0 translate-y-0 scale-100' : 'opacity-0 blur-lg translate-y-8 scale-96'
             }`}>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full">
                 <Input
